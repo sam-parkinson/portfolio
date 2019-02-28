@@ -10,7 +10,7 @@ header {
 }
 */
 
-header ul {
+header ul, .portfolio ul {
   list-style-type: none;
   padding: 0;
 }
@@ -32,6 +32,12 @@ section {
   border: 1px solid black;
   margin: 5px;
   padding: 5px;
+}
+
+.project-list * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* add a media query here for larger screens */
