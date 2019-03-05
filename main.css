@@ -43,6 +43,10 @@ header ul {
   margin-top: 0px;
 }
 
+h1, .navbar * {
+  cursor: pointer;
+}
+
 main {
   max-width: 700px;
   margin-left: auto;
@@ -67,6 +71,10 @@ section {
   margin-bottom: 5px;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 720px) {
 
   header {
@@ -81,13 +89,5 @@ section {
     justify-self: flex-end;
     margin-right: 0;
   }
-
-  /* change the layout based on screen width
-  
-  change position of h1 and header ul
-
-  flex out sections to max width
-  
-  */
 
 }
