@@ -80,6 +80,11 @@ section {
   display: none;
 }
 
+address {
+  font-size: 14px;
+  font-style: normal;
+}
+
 @media screen and (min-width: 720px) {
 
   header {
