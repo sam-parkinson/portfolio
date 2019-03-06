@@ -1,15 +1,14 @@
 function sectionClicked() {
-  // check if the screen is a certain size
   $('.navbar li, h1').on('click', event => {
     const target = $(event.currentTarget).text().toLowerCase();
     if (target === 'sam parkinson') {
       showSection('.default');
+      goToSection('default');
     } else {
       showSection('.' + target);
+      goToSection(target);
     }
   })
-  // check if the section name was clicked
-  // call relevant function
 }
 
 function showSection(clicked) {
@@ -17,22 +16,14 @@ function showSection(clicked) {
   $(clicked).removeClass('hidden');
 }
 
-function goToSection() {
-  // go to clicked section
+function goToSection(clicked) {
+  const scrolled = document.getElementsByClassName(clicked)[0];
+  if (clicked === 'contact') {
+    scrolled.scrollIntoView(false);
+  } else {
+    scrolled.scrollIntoView(true);
+    window.scrollBy(0, -64);
+  }
 }
 
-function screenExpand() {
-  // the screen expands past x pixels
-}
-
-function screenContract() {
-  // the screen shrinks 
-}
-
-function pageLoaded() {
-  sectionClicked();
-  screenExpand();
-  screenContract();
-}
-
-$(pageLoaded);
+$(sectionClicked);
